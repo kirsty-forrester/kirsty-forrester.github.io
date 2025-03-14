@@ -15,11 +15,11 @@
         var ukNotice = document.getElementById('uk-notice');
 
         if (geoLocation === 'UK' || geoLocation === 'GB') {
-          ukNotice.classList.removeClass('hidden');
-          defaultNotice.classList.addClass('hidden');
+          ukNotice.classList.remove('hidden');
+          defaultNotice.classList.add('hidden');
         } else {
-          defaultNotice.classList.removeClass('hidden');
-          ukNotice.classList.addClass('hidden');
+          defaultNotice.classList.remove('hidden');
+          ukNotice.classList.add('hidden');
         }
     </script>
 </head>
