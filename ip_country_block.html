@@ -11,7 +11,16 @@
 
     <script type="text/javascript">
         var geoLocation = "::GEO::";
-        console.log('Geo location = ' + geoLocation);
+        var defaultNotice = document.getElementById('default-notice');
+        var ukNotice = document.getElementById('uk-notice');
+
+        if (geoLocation === 'UK' || geoLocation === 'GB') {
+          ukNotice.classList.removeClass('hidden');
+          defaultNotice.classList.addClass('hidden');
+        } else {
+          defaultNotice.classList.removeClass('hidden');
+          ukNotice.classList.addClass('hidden');
+        }
     </script>
 </head>
 <body>
@@ -23,11 +32,17 @@
 <div class="content">
     <h1>Sorry, you have been blocked</h1>
 
-    <p>If you live in the United Kingdom, this block is the result of new legislation from OFCOM which leaves us temporarily unable to operate in the UK due to the risk of fines. OFCOM is requiring us to comply with a long list of demands, some of which are too expensive or complicated to implement for such a small website so we have been left with no choice but to block UK users.</p>
-    <p>We are actively exploring options to bring it back online and any information will be posted on this page.</p>
-    <p>The pattern maker remains online for you to create and view your own patterns only; see button below</p>
+    <div id="default-notice">
+        Certain have countries have been blocked from accessing this website due to a high percentage of abusive requests. We also sometimes block individual users based on IP address.
+    </div>
 
-    <a href="https://maker.kandipatterns.com" target="_blank" class="button button--primary button--large">Pattern Maker</a>
+    <div id="uk-notice" class="hidden">
+        <p>If you live in the United Kingdom, this block is the result of new legislation from OFCOM which leaves us temporarily unable to operate in the UK due to the risk of fines. OFCOM is requiring us to comply with a long list of demands, some of which are too expensive or complicated to implement for such a small website so we have been left with no choice but to block UK users.</p>
+        <p>We are actively exploring options to bring it back online and any information will be posted on this page.</p>
+        <p>The pattern maker remains online for you to create and view your own patterns only; see button below</p>
+
+        <a href="https://maker.kandipatterns.com" target="_blank" class="button button--primary button--large">Pattern Maker</a>
+    </div>
 </div>
 </body>
 </html>
