@@ -8,20 +8,6 @@
 
     <link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900|Lato:400,700,900" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="/css/main.css?v=1-1"/>
-
-    <script type="text/javascript">
-        var geoLocation = "::GEO::";
-        var defaultNotice = document.getElementById('default-notice');
-        var ukNotice = document.getElementById('uk-notice');
-
-        if (geoLocation === 'UK' || geoLocation === 'GB') {
-          ukNotice.classList.remove('hidden');
-          defaultNotice.classList.add('hidden');
-        } else {
-          defaultNotice.classList.remove('hidden');
-          ukNotice.classList.add('hidden');
-        }
-    </script>
 </head>
 <body>
 <div class="header">
