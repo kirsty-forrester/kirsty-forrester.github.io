@@ -42,6 +42,7 @@ a {
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #189eb4;
+    overflow: hidden;
 }
 
 h2 {
